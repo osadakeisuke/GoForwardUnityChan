@@ -33,13 +33,12 @@ public class CubeController : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision2D)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("あたった！");
-//        if (other.gameObject.tag != "unitychan")
-//        {
-        this.GetComponent<AudioSource>().Play();
-//        }
+        if (other.gameObject.tag != "unitychan")
+        {
+            this.GetComponent<AudioSource>().Play();
+        }
 
     }
 }
